@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mistiq Perfumes — Fragancias Exclusivas para Cada Estilo</title>
-    <meta name="description" content="Descubre perfumes de lujo con atención personalizada y asesoría experta.">
+    <title>Mistiq Perfumes - Fragancias exclusivas para cada estilo</title>
+    <meta name="description" content="Descubre perfumes de lujo con atención personalizada, catálogo filtrable y compra asistida.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -12,37 +12,42 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <h1>MistiQ Perfumes</h1>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#inicio" class="nav-link">Inicio</a></li>
-                <li><a href="#catalogo" class="nav-link">Catálogo</a></li>
-                <li><a href="#atencion" class="nav-link">Atención Personalizada</a></li>
-                <li><a href="#contacto" class="nav-link">Contacto</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
+    <div id="site-header"></div>
 
     <section id="inicio" class="hero">
+        <div class="hero-splash" aria-hidden="true">
+            <canvas id="heroSplashCanvas"></canvas>
+        </div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1 class="hero-title">Fragancias Exclusivas</h1>
             <p class="hero-subtitle">Descubre el arte de la perfumería de lujo</p>
-            <a href="#catalogo" class="btn-primary">Explorar Catálogo</a>
+            <a href="#catalogo" class="btn-primary">Explorar catálogo</a>
         </div>
     </section>
 
     <section id="catalogo" class="catalog-section">
         <div class="container">
-            <h2 class="section-title">Nuestro Catálogo</h2>
+            <div class="section-header">
+                <div>
+                    <h2 id="catalogTitle" class="section-title section-title-left">Todos los perfumes</h2>
+                    <p id="catalogDescription" class="section-description">Explora toda la colección de fragancias exclusivas de Mistiq.</p>
+                </div>
+                <p id="catalogSummary" class="catalog-summary"></p>
+            </div>
+
+            <div id="catalogViews" class="catalog-pills"></div>
+
+            <div class="catalog-showcase">
+                <div class="section-header showcase-header">
+                    <div>
+                        <p class="page-kicker showcase-kicker">Selección curada</p>
+                        <h3 class="section-title section-title-left showcase-title">Perfumes destacados</h3>
+                        <p class="section-description">Una pila editorial con las fragancias que más representan el estilo Mistiq.</p>
+                    </div>
+                </div>
+                <div id="scrollStackShowcase" class="scroll-stack-root"></div>
+            </div>
 
             <div class="search-container">
                 <input type="text" id="searchInput" placeholder="Buscar por nombre o referencia..." class="search-input">
@@ -51,53 +56,64 @@
 
             <div class="filters">
                 <div class="filter-group">
-                    <label>Categoría Olfativa:</label>
-                    <select id="filterCategory" class="filter-select">
-                        <option value="">Todas</option>
-                        <option value="citrica">Cítrica</option>
-                        <option value="floral">Floral</option>
-                        <option value="amaderada">Amaderada</option>
-                        <option value="oriental">Oriental</option>
-                        <option value="fougere">Fougère</option>
-                        <option value="chipre">Chipre</option>
-                        <option value="gourmand">Gourmand</option>
-                    </select>
+                    <label for="filterCategory">Familia olfativa</label>
+                    <select id="filterCategory" class="filter-select"></select>
                 </div>
 
                 <div class="filter-group">
-                    <label>Género:</label>
-                    <select id="filterGender" class="filter-select">
-                        <option value="">Todos</option>
-                        <option value="femenino">Femenino</option>
-                        <option value="masculino">Masculino</option>
+                    <label for="filterAudience">Público</label>
+                    <select id="filterAudience" class="filter-select">
+                        <option value="">Todas</option>
+                        <option value="men">Hombre</option>
+                        <option value="women">Mujer</option>
                         <option value="unisex">Unisex</option>
                     </select>
                 </div>
 
                 <div class="filter-group">
-                    <label>Momento:</label>
-                    <select id="filterMoment" class="filter-select">
-                        <option value="">Todos</option>
-                        <option value="dia">Día</option>
-                        <option value="noche">Noche</option>
+                    <label for="filterCollection">Colección</label>
+                    <select id="filterCollection" class="filter-select">
+                        <option value="">Todas</option>
+                        <option value="arabic">Árabe</option>
+                        <option value="designer">Diseñador</option>
+                        <option value="niche">Nicho</option>
                     </select>
                 </div>
 
-                <button id="resetFilters" class="btn-secondary">Limpiar Filtros</button>
+                <div class="filter-group">
+                    <label for="filterMoment">Momento</label>
+                    <select id="filterMoment" class="filter-select">
+                        <option value="">Todos</option>
+                        <option value="day">Día</option>
+                        <option value="night">Noche</option>
+                        <option value="versatile">Todo el día</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="sortProducts">Ordenar</label>
+                    <select id="sortProducts" class="filter-select">
+                        <option value="featured">Destacados</option>
+                        <option value="price-asc">Precio: menor a mayor</option>
+                        <option value="price-desc">Precio: mayor a menor</option>
+                        <option value="name">Nombre A-Z</option>
+                    </select>
+                </div>
+
+                <button id="resetFilters" class="btn-secondary">Limpiar filtros</button>
             </div>
 
-            <div id="productGrid" class="product-grid">
-                
-            </div>
+            <div id="productGrid" class="product-grid"></div>
         </div>
     </section>
 
     <section id="atencion" class="personalized-section">
         <div class="container">
             <h2 class="section-title-light">ATENCIÓN PERSONALIZADA</h2>
-            <p class="personalized-text">Si tienes dudas, contáctanos para ayudarte en tu compra.</p>
-            <a href="https://wa.me/573113094285?text=Hola,%20necesito%20asesoría%20personalizada" target="_blank" class="btn-whatsapp-large">
-                <i class="fab fa-whatsapp"></i> Contactar por WhatsApp
+            <p class="personalized-text">Si tienes dudas, contáctanos para ayudarte a elegir la fragancia ideal y preparar tu compra.</p>
+            <a href="https://wa.me/573103727936?text=Hola,%20necesito%20asesoría%20personalizada%20para%20elegir%20un%20perfume." target="_blank" class="btn-whatsapp-large">
+                <i class="fab fa-whatsapp"></i>
+                Contactar por WhatsApp
             </a>
         </div>
     </section>
@@ -106,70 +122,39 @@
         <div class="container">
             <h2 class="section-title">Contacto</h2>
             <div class="contact-grid">
-                <div class="contact-item">
+                <div class="contact-item reveal-on-scroll">
                     <i class="fas fa-phone"></i>
                     <h3>Teléfono</h3>
-                    <p>+57 311 3094285</p>
+                    <p class="contact-phone-list">+57 311 309 4285<br>+57 310 372 7936</p>
                 </div>
-                <div class="contact-item">
+                <div class="contact-item reveal-on-scroll">
                     <i class="fas fa-map-marker-alt"></i>
                     <h3>Ubicación</h3>
-                    <p>Bogotá D.C, Colombia</p>
+                    <p>Tienda virtual<br>Bogotá, Colombia</p>
                 </div>
-                <div class="contact-item">
+                <div class="contact-item reveal-on-scroll">
                     <i class="fas fa-envelope"></i>
                     <h3>Email</h3>
                     <p>contacto@mistiqperfumes.com</p>
                 </div>
             </div>
+            <h3 class="social-title">Redes Sociales</h3>
             <div class="social-links">
-                <a href="https://instagram.com/mistiqperfumes" target="_blank" class="social-link">
+                <a href="https://instagram.com/mistiqperfumes" target="_blank" class="social-link" aria-label="Instagram">
                     <i class="fab fa-instagram"></i>
                 </a>
-                <a href="https://facebook.com/mistiqperfumes" target="_blank" class="social-link">
+                <a href="https://facebook.com/mistiqperfumes" target="_blank" class="social-link" aria-label="Facebook">
                     <i class="fab fa-facebook"></i>
                 </a>
-                <a href="https://tiktok.com/@mistiqperfumes" target="_blank" class="social-link">
+                <a href="https://tiktok.com/@mistiqperfumes" target="_blank" class="social-link" aria-label="TikTok">
                     <i class="fab fa-tiktok"></i>
                 </a>
             </div>
         </div>
     </section>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <h3>MISTIQ</h3>
-                    <p>Fragancias Exclusivas</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Enlaces Rápidos</h4>
-                    <ul>
-                        <li><a href="#inicio">Inicio</a></li>
-                        <li><a href="#catalogo">Catálogo</a></li>
-                        <li><a href="#atencion">Atención Personalizada</a></li>
-                        <li><a href="#contacto">Contacto</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Mistiq Perfumes. Todos los derechos reservados.</p>
-            </div>
-        </div>
-    </footer>
-
-    <a href="https://wa.me/573113094285?text=%C2%A1Hola%20Mistiq!%20%F0%9F%91%8B%E2%9C%A8%0AAcabo%20de%20visitar%20su%20p%C3%A1gina%20web%20y%20qued%C3%A9%20encantado%20con%20las%20fragancias%20que%20ofrecen.%20Me%20interesa%20conocer%20m%C3%A1s%20detalles%20para%20realizar%20mi%20compra%20%E2%80%94%20quiero%20sentir%20esa%20esencia%20%C3%BAnica%20que%20los%20distingue.%20%F0%9F%92%8E%0A%C2%BFPodr%C3%ADan%20asesorarme%20o%20mostrarme%20las%20opciones%20disponibles%3F" 
-        target="_blank" 
-        class="whatsapp-float" 
-        aria-label="Contactar por WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-</a>
-
-
-    <button id="backToTop" class="back-to-top" aria-label="Volver arriba">
-        <i class="fas fa-arrow-up"></i>
-    </button>
+    <div id="site-footer"></div>
+    <div id="site-floating"></div>
 
     <script type="module" src="./main.js"></script>
 </body>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de perfumes - Mistiq Perfumes</title>
+    <meta name="description" content="Explora perfumes para hombre, mujer, unisex, nuevos ingresos y más vendidos.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="site-header"></div>
+
+    <section class="page-hero page-hero-compact">
+        <div class="page-hero-overlay"></div>
+        <div class="container page-hero-content">
+            <p class="page-kicker">Colección Mistiq</p>
+            <h1 id="catalogTitle">Todos los perfumes</h1>
+            <p id="catalogDescription">Explora toda la colección de fragancias exclusivas de Mistiq.</p>
+        </div>
+    </section>
+
+    <section class="catalog-section catalog-page-section">
+        <div class="container">
+            <div class="section-header">
+                <div id="catalogViews" class="catalog-pills"></div>
+                <p id="catalogSummary" class="catalog-summary"></p>
+            </div>
+
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Buscar por nombre o referencia..." class="search-input">
+                <i class="fas fa-search search-icon"></i>
+            </div>
+
+            <div class="filters">
+                <div class="filter-group">
+                    <label for="filterCategory">Familia olfativa</label>
+                    <select id="filterCategory" class="filter-select"></select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="filterAudience">Público</label>
+                    <select id="filterAudience" class="filter-select">
+                        <option value="">Todas</option>
+                        <option value="men">Hombre</option>
+                        <option value="women">Mujer</option>
+                        <option value="unisex">Unisex</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="filterCollection">Colección</label>
+                    <select id="filterCollection" class="filter-select">
+                        <option value="">Todas</option>
+                        <option value="arabic">Árabe</option>
+                        <option value="designer">Diseñador</option>
+                        <option value="niche">Nicho</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="filterMoment">Momento</label>
+                    <select id="filterMoment" class="filter-select">
+                        <option value="">Todos</option>
+                        <option value="day">Día</option>
+                        <option value="night">Noche</option>
+                        <option value="versatile">Todo el día</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="sortProducts">Ordenar</label>
+                    <select id="sortProducts" class="filter-select">
+                        <option value="featured">Destacados</option>
+                        <option value="price-asc">Precio: menor a mayor</option>
+                        <option value="price-desc">Precio: mayor a menor</option>
+                        <option value="name">Nombre A-Z</option>
+                    </select>
+                </div>
+
+                <button id="resetFilters" class="btn-secondary">Limpiar filtros</button>
+            </div>
+
+            <div id="productGrid" class="product-grid"></div>
+        </div>
+    </section>
+
+    <div id="site-footer"></div>
+    <div id="site-floating"></div>
+
+    <script type="module" src="./catalog.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de compras - Mistiq Perfumes</title>
+    <meta name="description" content="Revisa perfumes agregados, cantidades, totales y continúa con tu pedido.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="site-header"></div>
+
+    <section class="cart-page">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <h1 class="section-title section-title-left">Tu carrito</h1>
+                    <p class="section-description">Ajusta cantidades, elimina referencias y deja listo tu pedido para finalizar la compra.</p>
+                </div>
+            </div>
+
+            <div class="cart-layout">
+                <div id="cartItems" class="cart-items-panel"></div>
+
+                <aside class="cart-summary-panel">
+                    <div class="summary-card">
+                        <h2>Resumen</h2>
+                        <div id="cartSummary"></div>
+                        <button type="button" id="clearCartButton" class="btn-secondary btn-full">Vaciar carrito</button>
+                    </div>
+
+                    <div class="summary-card checkout-card">
+                        <h2>Pedido listo para finalizar</h2>
+                        <p class="checkout-note">Aún no hay pasarela de pago integrada, pero puedes dejar tu pedido estructurado y enviarlo por WhatsApp.</p>
+                        <form id="checkoutForm" class="checkout-form">
+                            <label>
+                                Nombre
+                                <input type="text" name="name" class="checkout-input" placeholder="Tu nombre">
+                            </label>
+                            <label>
+                                Teléfono
+                                <input type="tel" name="phone" class="checkout-input" placeholder="Tu número">
+                            </label>
+                            <label>
+                                Entrega
+                                <input type="text" name="delivery" class="checkout-input" placeholder="Ciudad o dirección de entrega">
+                            </label>
+                            <label>
+                                Instrucciones adicionales para el pedido
+                                <textarea name="notes" class="checkout-input checkout-textarea" placeholder="Instrucciones adicionales"></textarea>
+                            </label>
+                        </form>
+                        <button type="button" id="checkoutButton" class="btn-primary btn-full">Enviar pedido por WhatsApp</button>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <div id="site-footer"></div>
+    <div id="site-floating"></div>
+
+    <script type="module" src="./cart.js"></script>
+</body>
+</html>

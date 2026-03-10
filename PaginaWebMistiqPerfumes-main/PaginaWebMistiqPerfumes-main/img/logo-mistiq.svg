@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" role="img" aria-labelledby="logoTitle logoDesc">
+  <title id="logoTitle">Logo Mistiq Perfumes</title>
+  <desc id="logoDesc">Emblema circular negro y dorado de Mistiq Perfumes</desc>
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f4df8b"/>
+      <stop offset="35%" stop-color="#d4af37"/>
+      <stop offset="65%" stop-color="#b8860b"/>
+      <stop offset="100%" stop-color="#f2d16b"/>
+    </linearGradient>
+    <linearGradient id="dark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090909"/>
+      <stop offset="100%" stop-color="#16130d"/>
+    </linearGradient>
+  </defs>
+
+  <circle cx="110" cy="110" r="103" fill="url(#dark)" stroke="url(#gold)" stroke-width="8"/>
+  <circle cx="110" cy="110" r="88" fill="none" stroke="url(#gold)" stroke-width="3.5"/>
+  <circle cx="110" cy="110" r="79" fill="none" stroke="rgba(212,175,55,0.55)" stroke-width="1.5"/>
+
+  <g fill="url(#gold)">
+    <path d="M110 58l16 10-6 11h-20l-6-11 16-10zm-27 17l22-14 5 8-8 14H85l-2-8zm54 0l-3 8h-17l-8-14 5-8 23 14z"/>
+    <path d="M89 93h42c4 0 7 3 7 7v7H82v-7c0-4 3-7 7-7z"/>
+    <path d="M91 110h38l-4 48c-.5 6-5.5 10-11.5 10h-7c-6 0-11-4-11.5-10l-4-48z"/>
+    <path d="M84 161h52c-6 10-16 16-26 16s-20-6-26-16z"/>
+  </g>
+
+  <text x="110" y="46" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="16" letter-spacing="4" fill="url(#gold)">ORIGINALES</text>
+  <text x="110" y="128" text-anchor="middle" font-family="Playfair Display, Georgia, serif" font-size="48" font-weight="700" fill="url(#gold)">MISTIQ</text>
+  <text x="110" y="158" text-anchor="middle" font-family="Playfair Display, Georgia, serif" font-size="28" font-weight="700" fill="url(#gold)">PERFUMES</text>
+</svg>

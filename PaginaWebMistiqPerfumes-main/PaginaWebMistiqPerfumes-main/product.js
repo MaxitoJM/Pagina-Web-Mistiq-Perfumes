@@ -1,131 +1,149 @@
-import { products } from './products.js';
+import { getProductById, getRelatedProducts } from './catalog-data.js';
+import { addToCart } from './cart-store.js';
+import {
+    attachCatalogActions,
+    formatPrice,
+    mountSiteShell,
+    renderProductCard,
+    renderQuantitySelector,
+    setupRevealObserver,
+    showToast
+} from './ui.js';
 
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav-menu');
-const backToTopBtn = document.getElementById('backToTop');
-const productDetailContainer = document.getElementById('productDetailContainer');
+function getProductId() {
+    const urlParams = new URLSearchParams(window.location.search);
+    return Number(urlParams.get('id'));
+}
 
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
-});
+function renderMissingProduct() {
+    const container = document.getElementById('productDetailContainer');
 
-navMenu.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
-    });
-});
-
-window.addEventListener('scroll', () => {
-    if (window.pageYOffset > 300) {
-        backToTopBtn.classList.add('show');
-    } else {
-        backToTopBtn.classList.remove('show');
-    }
-});
-
-backToTopBtn.addEventListener('click', () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-});
-
-const urlParams = new URLSearchParams(window.location.search);
-const productId = parseInt(urlParams.get('id'));
-
-const product = products.find(p => p.id === productId);
-
-if (!product) {
-    productDetailContainer.innerHTML = `
-        <div style="text-align: center; padding: 3rem;">
+    container.innerHTML = `
+        <div class="empty-product-state">
             <h2>Producto no encontrado</h2>
-            <p style="margin: 2rem 0;">Lo sentimos, no pudimos encontrar el producto que buscas.</p>
-            <a href="/#catalogo" class="btn-primary">Volver al Catálogo</a>
+            <p>No pudimos encontrar el perfume solicitado. Vuelve al catálogo para seguir explorando.</p>
+            <a href="./catalog.html" class="btn-primary">Volver al catálogo</a>
         </div>
     `;
-} else {
-    const categoryLabels = {
-        citrica: 'Cítrica',
-        floral: 'Floral',
-        amaderada: 'Amaderada',
-        fresca: 'Fresca',
-        frutal: 'Frutal',
-        verde: 'Verde',
-        aromatico: 'Aromático',
-        especiado: 'Especiado',
-        dulce : 'Dulce',
-        avainillado: 'Avainillado',
-        ambar : 'Ámbar',
-        canela : 'Canela',
-        marino : 'Marino',
-    };
+}
 
-    const genderLabels = {
-        femenino: 'Femenino',
-        masculino: 'Masculino',
-        unisex: 'Unisex'
-    };
+function renderProduct(product) {
+    const container = document.getElementById('productDetailContainer');
+    const relatedProducts = getRelatedProducts(product);
 
-    const momentLabels = {
-        dia: 'Día',
-        noche: 'Noche'
-    };
-
-    productDetailContainer.innerHTML = `
-        <a href="/#catalogo" class="btn-back">
-            <i class="fas fa-arrow-left"></i> Volver al Catálogo
+    container.innerHTML = `
+        <a href="./catalog.html" class="btn-back">
+            <i class="fas fa-arrow-left"></i>
+            Volver al catálogo
         </a>
         <div class="product-detail-grid">
             <div class="product-gallery">
-                <img id="mainImage" src="${product.gallery[0]}" alt="${product.name}" class="main-image">
+                <img id="mainImage" src="${product.gallery[0].src}" alt="${product.gallery[0].alt}" class="main-image" decoding="async">
                 <div class="thumbnail-grid">
-                    ${product.gallery.map((img, index) => `
-                        <img src="${img}" alt="${product.name} ${index + 1}"
-                             class="thumbnail ${index === 0 ? 'active' : ''}"
-                             data-index="${index}">
-                    `).join('')}
+                    ${product.gallery
+                        .map(
+                            (image, index) => `
+                                <button type="button" class="thumbnail ${index === 0 ? 'active' : ''}" data-gallery-index="${index}">
+                                    <img src="${image.src}" alt="${image.alt}" loading="lazy" decoding="async">
+                                    <span>${image.label}</span>
+                                </button>
+                            `
+                        )
+                        .join('')}
                 </div>
             </div>
             <div class="product-detail-info">
+                <span class="detail-category-pill">${product.audienceLabel}</span>
                 <h1>${product.name}</h1>
                 <p class="product-detail-reference">Ref: ${product.reference}</p>
-                <p class="product-detail-price">$${product.price.toLocaleString('es-CO')}</p>
+                <p class="product-detail-price">${formatPrice(product.price)}</p>
                 <p class="product-description">${product.description}</p>
                 <div class="product-meta">
                     <div class="meta-item">
-                        <span class="meta-label">Categoría Olfativa:</span>
-                        <span>${categoryLabels[product.category]}</span>
+                        <span class="meta-label">Categoría</span>
+                        <span>${product.audienceLabel}</span>
                     </div>
                     <div class="meta-item">
-                        <span class="meta-label">Género:</span>
-                        <span>${genderLabels[product.gender]}</span>
+                        <span class="meta-label">Familia olfativa</span>
+                        <span>${product.familyLabel}</span>
                     </div>
                     <div class="meta-item">
-                        <span class="meta-label">Momento del Día:</span>
-                        <span>${momentLabels[product.moment]}</span>
+                        <span class="meta-label">Colección</span>
+                        <span>${product.collectionLabel}</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Ideal para</span>
+                        <span>${product.momentLabel}</span>
                     </div>
                 </div>
-                <a href="https://wa.me/573113094285?text=Hola,%20me%20interesa%20el%20perfume%20${encodeURIComponent(product.name)}%20(Ref:%20${product.reference})"
-                   target="_blank"
-                   class="btn-whatsapp-large">
-                    <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
+                <div class="product-purchase-box">
+                    <div id="productQuantity">${renderQuantitySelector(1)}</div>
+                    <div class="product-detail-actions">
+                        <button type="button" class="btn-primary" id="addToCartButton">Agregar al carrito</button>
+                        <a href="./cart.html" class="btn-secondary">Ver carrito</a>
+                    </div>
+                </div>
+                <a href="https://wa.me/573103727936?text=Hola,%20me%20interesa%20el%20perfume%20${encodeURIComponent(product.name)}%20(Ref:%20${product.reference})" target="_blank" class="btn-whatsapp-large">
+                    <i class="fab fa-whatsapp"></i>
+                    Consultar por WhatsApp
                 </a>
             </div>
         </div>
+        <section class="related-products">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title section-title-left">También te puede interesar</h2>
+                    <p class="section-description">Fragancias relacionadas con el mismo estilo y perfil de uso.</p>
+                </div>
+            </div>
+            <div id="relatedProducts" class="product-grid related-grid">
+                ${relatedProducts.map(renderProductCard).join('')}
+            </div>
+        </section>
     `;
 
     const mainImage = document.getElementById('mainImage');
-    const thumbnails = document.querySelectorAll('.thumbnail');
+    const thumbnails = document.querySelectorAll('[data-gallery-index]');
+    const quantityRoot = document.getElementById('productQuantity');
+    const quantityInput = quantityRoot.querySelector('.quantity-input');
+    const addToCartButton = document.getElementById('addToCartButton');
+    const decreaseButton = quantityRoot.querySelector('[data-quantity-action="decrease"]');
+    const increaseButton = quantityRoot.querySelector('[data-quantity-action="increase"]');
 
     thumbnails.forEach(thumbnail => {
         thumbnail.addEventListener('click', () => {
-            const index = parseInt(thumbnail.dataset.index);
-            mainImage.src = product.gallery[index];
+            const nextImage = product.gallery[Number(thumbnail.dataset.galleryIndex)];
+            mainImage.src = nextImage.src;
+            mainImage.alt = nextImage.alt;
 
-            thumbnails.forEach(t => t.classList.remove('active'));
+            thumbnails.forEach(item => item.classList.remove('active'));
             thumbnail.classList.add('active');
         });
     });
+
+    const clampQuantity = value => {
+        quantityInput.value = Math.max(1, Math.min(99, Number(value) || 1));
+    };
+
+    decreaseButton?.addEventListener('click', () => clampQuantity(Number(quantityInput.value) - 1));
+    increaseButton?.addEventListener('click', () => clampQuantity(Number(quantityInput.value) + 1));
+    quantityInput?.addEventListener('change', () => clampQuantity(quantityInput.value));
+
+    addToCartButton?.addEventListener('click', () => {
+        addToCart(product.id, Number(quantityInput.value));
+        showToast('Perfume agregado al carrito.');
+    });
+
+    attachCatalogActions(document.getElementById('relatedProducts'));
+    setupRevealObserver();
+}
+
+mountSiteShell('product');
+
+const product = getProductById(getProductId());
+
+if (!product) {
+    renderMissingProduct();
+} else {
+    renderProduct(product);
 }
