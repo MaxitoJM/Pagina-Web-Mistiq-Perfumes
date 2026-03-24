@@ -1199,7 +1199,7 @@ button {
 
 .footer-content {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 2rem;
     margin-bottom: 2rem;
 }
@@ -1577,5 +1577,139 @@ button {
     .toast-container {
         left: 16px;
         right: 16px;
+    }
+}
+
+/* ─── WhatsApp "no encontraste" banner ──────────────────────────── */
+.whatsapp-not-found-banner {
+    margin-top: 3rem;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #0a1a0f 0%, #0d2b16 100%);
+    border: 1px solid rgba(37, 211, 102, 0.2);
+    padding: 2rem 2.5rem;
+    box-shadow: 0 8px 32px rgba(37, 211, 102, 0.08);
+}
+
+.whatsapp-not-found-inner {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.whatsapp-not-found-icon {
+    font-size: 2.8rem;
+    color: #25d366;
+    flex-shrink: 0;
+}
+
+.whatsapp-not-found-text {
+    flex: 1;
+    min-width: 200px;
+}
+
+.whatsapp-not-found-title {
+    font-family: var(--font-secondary);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 0.3rem;
+}
+
+.whatsapp-not-found-sub {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.btn-whatsapp-banner {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.85rem 1.8rem;
+    background-color: #25d366;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 999px;
+    text-decoration: none;
+    white-space: nowrap;
+    box-shadow: 0 4px 16px rgba(37, 211, 102, 0.3);
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-whatsapp-banner:hover {
+    background-color: #1fb858;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+}
+
+/* WhatsApp inline button inside empty state */
+.btn-whatsapp-inline {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.2rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #25d366;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: 999px;
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(37, 211, 102, 0.25);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-whatsapp-inline:hover {
+    background-color: #1fb858;
+    transform: translateY(-2px);
+}
+
+/* ─── Footer enhancements ──────────────────────────────────────── */
+.footer-tagline {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.45);
+    margin-top: 0.2rem;
+}
+
+.footer-social {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+
+.footer-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.footer-social a:hover {
+    background-color: var(--color-secondary);
+    color: #000000;
+}
+
+.footer-links a[href^="tel"],
+.footer-links a[href^="mailto"] {
+    word-break: break-all;
+}
+
+@media (max-width: 560px) {
+    .whatsapp-not-found-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .btn-whatsapp-banner {
+        width: 100%;
+        justify-content: center;
     }
 }

@@ -119,6 +119,9 @@ export function initCatalogExperience(options = {}) {
                 <div class="empty-catalog-state">
                     <h3>No encontramos perfumes con esos filtros</h3>
                     <p>Prueba con otra búsqueda o limpia los filtros para volver a ver toda la colección.</p>
+                    <a href="https://wa.me/573103727936?text=Hola,%20estoy%20buscando%20un%20perfume%20que%20no%20encontré%20en%20el%20catálogo.%20¿Me%20pueden%20ayudar?" target="_blank" rel="noopener noreferrer" class="btn-whatsapp-inline">
+                        <i class="fab fa-whatsapp"></i> Preguntar por WhatsApp
+                    </a>
                 </div>
             `;
 

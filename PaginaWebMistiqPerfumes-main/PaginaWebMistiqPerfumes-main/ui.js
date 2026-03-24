@@ -74,15 +74,31 @@ function buildFooter() {
                     <div class="footer-logo">
                         <h3>MISTIQ</h3>
                         <p>Fragancias Exclusivas</p>
+                        <p class="footer-tagline">Bogotá, Colombia</p>
+                        <div class="footer-social">
+                            <a href="https://instagram.com/mistiqperfumes" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://facebook.com/mistiqperfumes" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                            <a href="https://tiktok.com/@mistiqperfumes" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                            <a href="https://wa.me/573103727936" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        </div>
                     </div>
                     <div class="footer-links">
-                        <h4>Enlaces Rápidos</h4>
+                        <h4>Navegación</h4>
                         <ul>
                             <li><a href="./index.html#inicio">Inicio</a></li>
                             <li><a href="./catalog.html">Catálogo</a></li>
                             <li><a href="./index.html#atencion">Atención Personalizada</a></li>
                             <li><a href="./cart.html">Carrito</a></li>
                             <li><a href="./index.html#contacto">Contacto</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Contacto</h4>
+                        <ul>
+                            <li><a href="tel:+573113094285">+57 311 309 4285</a></li>
+                            <li><a href="tel:+573103727936">+57 310 372 7936</a></li>
+                            <li><a href="mailto:contacto@mistiqperfumes.com">contacto@mistiqperfumes.com</a></li>
+                            <li><a href="https://wa.me/573103727936?text=Hola,%20quiero%20información%20sobre%20Mistiq%20Perfumes." target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
                         </ul>
                     </div>
                 </div>
