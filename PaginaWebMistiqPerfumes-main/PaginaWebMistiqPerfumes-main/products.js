@@ -654,6 +654,700 @@ export const products = [
         "./img/Perfume41_3.png"
     ],
     description: "Fragancia oriental amaderada con toques de ámbar, cuero y especias. Aroma lujoso y duradero que transmite autoridad, elegancia y presencia."
+},
+
+// ── RAYHAAN ───────────────────────────────────────────────────────────────────
+{
+    id: 42,
+    name: "TIGER - RAYHAAN",
+    reference: "RF0042",
+    price: 230000,
+    category: "dulce - amaderado",
+    gender: "hombre",
+    moment: "noche",
+    image: "./img/Perfume42.png",
+    gallery: ["", "", ""],
+    description: "Fragancia intensa y magnética con notas de manzana dulce, vainilla cremosa y ámbar cálido. Evoca la fuerza y elegancia del tigre — poderosa, sensual y de larga duración."
+},
+{
+    id: 43,
+    name: "LION - RAYHAAN",
+    reference: "RF0043",
+    price: 230000,
+    category: "dulce - amaderado",
+    gender: "hombre",
+    moment: "noche",
+    image: "./img/Perfume43.png",
+    gallery: ["", "", ""],
+    description: "Un aroma noble y majestuoso con notas de manzana dulce, vainilla y ámbar cálido. Imponente como el rey de la selva, elegante y adictivo para el hombre que no pasa desapercibido."
+},
+{
+    id: 44,
+    name: "OBSIDIAN - RAYHAAN",
+    reference: "RF0044",
+    price: 235000,
+    category: "ambar - ahumado",
+    gender: "hombre",
+    moment: "noche",
+    image: "./img/Perfume44.png",
+    gallery: ["", "", ""],
+    description: "Fragancia misteriosa y profunda con notas de ámbar oscuro, vainilla y oud ahumado. Perfecta para las noches donde el misterio y la elegancia se fusionan en una sola presencia."
+},
+{
+    id: 45,
+    name: "CRIMSON - RAYHAAN",
+    reference: "RF0045",
+    price: 240000,
+    category: "frutal - floral",
+    gender: "unisex",
+    moment: "noche",
+    image: "./img/Perfume45.png",
+    gallery: ["", "", ""],
+    description: "Una fragancia vibrante y seductora con notas de frutos rojos, rosa y almizcle dulce. Apasionada y elegante, ideal para quienes quieren dejar una huella irresistible."
+},
+{
+    id: 46,
+    name: "ELIXIR - RAYHAAN",
+    reference: "RF0046",
+    price: 220000,
+    category: "especiado - oriental",
+    gender: "hombre",
+    moment: "noche",
+    image: "./img/Perfume46.png",
+    gallery: ["", "", ""],
+    description: "Un elixir de sensaciones con notas de canela especiada, vainilla y ámbar intenso. Cálido, sofisticado y envolvente — el aroma perfecto para conquistas nocturnas."
+},
+{
+    id: 47,
+    name: "PACIFIC - RAYHAAN",
+    reference: "RF0047",
+    price: 220000,
+    category: "marino - fresco",
+    gender: "hombre",
+    moment: "dia",
+    image: "./img/Perfume47.png",
+    gallery: ["", "", ""],
+    description: "Fresco y libre como el Pacífico, con notas marinas, bergamota vibrante y almizcle limpio. Para el hombre moderno que irradia energía, confianza y estilo natural."
+},
+{
+    id: 48,
+    name: "TROPICAL VIBE - RAYHAAN",
+    reference: "RF0048",
+    price: 255000,
+    category: "frutal - tropical",
+    gender: "unisex",
+    moment: "dia",
+    image: "./img/Perfume48.png",
+    gallery: ["", "", ""],
+    description: "Una explosión tropical de piña jugosa, coco cremoso y vainilla suave. Alegre, refrescante y adictiva — el aroma perfecto para los que llevan el verano dentro."
+},
+{
+    id: 49,
+    name: "ITALIA - RAYHAAN",
+    reference: "RF0049",
+    price: 255000,
+    category: "aromatico - amaderado",
+    gender: "hombre",
+    moment: "dia",
+    image: "./img/Perfume49.png",
+    gallery: ["", "", ""],
+    description: "Elegancia italiana en cada spray: bergamota brillante, lavanda refinada y maderas suaves. Sofisticado, limpio y memorable — como un paseo por las calles de Milán."
+},
+
+// ── YARA - LATTAFA (Dama) ────────────────────────────────────────────────────
+{
+    id: 50,
+    name: "YARA ELIXIR - LATTAFA",
+    reference: "RF0050",
+    price: 250000,
+    category: "frutal - dulce",
+    gender: "mujer",
+    moment: "noche",
+    image: "./img/Perfume50.png",
+    gallery: ["", "", ""],
+    description: "Un elixir femenino irresistible con notas de fresa cremosa, vainilla y ámbar dulce. Sensual, cálido y adictivo — para la mujer que encanta con su sola presencia. 🍓✨"
+},
+{
+    id: 51,
+    name: "YARA CLASICA - LATTAFA",
+    reference: "RF0051",
+    price: 200000,
+    category: "floral - suave",
+    gender: "mujer",
+    moment: "dia",
+    image: "./img/Perfume51.png",
+    gallery: ["", "", ""],
+    description: "La versión más delicada y elegante de Yara. Orquídea exótica, vainilla suave y almizcle limpio crean una fragancia atemporal y refinada, perfecta para la mujer segura y sofisticada. 🌸"
+},
+{
+    id: 52,
+    name: "YARA TOUS - LATTAFA",
+    reference: "RF0052",
+    price: 200000,
+    category: "frutal - tropical",
+    gender: "mujer",
+    moment: "dia",
+    image: "./img/Perfume52.png",
+    gallery: ["", "", ""],
+    description: "Fresca, tropical y vibrante — Yara Tous combina mango jugoso, coco suave y vainilla tropical. Un aroma alegre y lleno de vida para la mujer que ama la aventura y el sol. 🥭🌴"
+},
+{
+    id: 53,
+    name: "YARA CRIMSON - LATTAFA",
+    reference: "RF0053",
+    price: 200000,
+    category: "frutal - floral",
+    gender: "mujer",
+    moment: "noche",
+    image: "./img/Perfume53.png",
+    gallery: ["", "", ""],
+    description: "Apasionada y femenina, con notas de frutos rojos jugosos, flores blancas y vainilla dulce. Para la mujer que ama llamar la atención con un aroma vibrante y memorable. ❤️🌸"
+},
+
+// ── BADEE AL OUD - LATTAFA (Unisex) ─────────────────────────────────────────
+{
+    id: 54,
+    name: "BADEE AL OUD OF GLORY - LATTAFA",
+    reference: "RF0054",
+    price: 200000,
+    category: "oriental - amaderado",
+    gender: "unisex",
+    moment: "noche",
+    image: "./img/Perfume54.png",
+    gallery: ["", "", ""],
+    description: "La gloria del oud oriental: intenso, profundo y magnético. Notas de oud puro, ámbar cálido y especias exóticas que envuelven con autoridad y lujo árabe auténtico. 🖤✨"
+},
+{
+    id: 55,
+    name: "BADEE AL OUD SUBLIME - LATTAFA",
+    reference: "RF0055",
+    price: 200000,
+    category: "frutal - floral",
+    gender: "unisex",
+    moment: "dia",
+    image: "./img/Perfume55.png",
+    gallery: ["", "", ""],
+    description: "Una fusión sublime de manzana fresca, rosa elegante y vainilla dulce. Sofisticado y accesible, perfectamente equilibrado para quienes buscan un aroma lujoso sin intimidar. 🍎🌹"
+},
+{
+    id: 56,
+    name: "BADEE AL OUD AMETHYST - LATTAFA",
+    reference: "RF0056",
+    price: 200000,
+    category: "floral - oriental",
+    gender: "unisex",
+    moment: "noche",
+    image: "./img/Perfume56.png",
+    gallery: ["", "", ""],
+    description: "Místico y cautivador como la piedra ámbar. Rosa profunda, oud envolvente y vainilla cremosa crean una fragancia que seduce desde el primer contacto y perdura horas. 💜🌹"
+},
+{
+    id: 57,
+    name: "BADEE AL OUD NOBLE BUSH - LATTAFA",
+    reference: "RF0057",
+    price: 220000,
+    category: "floral - dulce",
+    gender: "unisex",
+    moment: "dia",
+    image: "./img/Perfume57.png",
+    gallery: ["", "", ""],
+    description: "Elegante y noble, con pétalos de rosa fresca, vainilla suave y almizcle dulce. Una fragancia que irradia clase y distinción, perfecta para quienes aman lo refinado. 🌿🌸"
+},
+
+// ── LATTAFA / ARMAF (Dama) ───────────────────────────────────────────────────
+{
+    id: 58,
+    name: "HONOR AND GLORY - LATTAFA",
+    reference: "RF0058",
+    price: 200000,
+    category: "frutal - especiado",
+    gender: "mujer",
+    moment: "dia",
+    image: "./img/Perfume58.png",
+    gallery: ["", "", ""],
+    description: "Un tributo a la feminidad triunfante: piña tropical, vainilla cálida y especias dulces en perfecta armonía. Una fragancia que celebra a la mujer fuerte, bella y memorable. 🏆🌺"
+},
+{
+    id: 59,
+    name: "HER - ARMAF",
+    reference: "RF0059",
+    price: 200000,
+    category: "frutal - floral",
+    gender: "mujer",
+    moment: "noche",
+    image: "./img/Perfume59.png",
+    gallery: ["", "", ""],
+    description: "Creada para ella — un aroma íntimo y seductor con notas de frutos rojos maduros, rosa delicada y vainilla cálida. Femenina, elegante y absolutamente irresistible. 💕"
+},
+
+// ── MAYAR - LATTAFA (Dama) ───────────────────────────────────────────────────
+{
+    id: 60,
+    name: "MAYAR CLASICO - LATTAFA",
+    reference: "RF0060",
+    price: 200000,
+    category: "especiado - dulce",
+    gender: "mujer",
+    moment: "noche",
+    image: "./img/Perfume60.png",
+    gallery: ["", "", ""],
+    description: "La esencia clásica de Mayar: canela suave, dátiles dulces y vainilla cálida forman un aroma oriental envolvente y femenino. Para la mujer que ama los aromas profundos y duraderos. 🌙"
+},
+{
+    id: 61,
+    name: "MAYAR NATURAL INTENSE - LATTAFA",
+    reference: "RF0061",
+    price: 220000,
+    category: "especiado - dulce",
+    gender: "mujer",
+    moment: "noche",
+    image: "./img/Perfume61.png",
+    gallery: ["", "", ""],
+    description: "Más intensa y apasionada que la versión clásica. Canela dulce, caramelo tostado y vainilla intensa crean una combinación adictiva con excelente proyección y duración. 🔥✨"
+},
+
+// ── ECLAIRE ──────────────────────────────────────────────────────────────────
+{
+    id: 62,
+    name: "BANOFFI - ECLAIRE",
+    reference: "RF0062",
+    price: 225000,
+    category: "dulce - gourmand",
+    gender: "mujer",
+    moment: "dia",
+    image: "./img/Perfume62.png",
+    gallery: ["", "", ""],
+    description: "Inspirado en el famoso postre, BANOFFI es una fragancia gourmand deliciosa: banano maduro, toffee caramelizado y vainilla cremosa. Dulce, juguetona y completamente adictiva. 🍌🍮"
+},
+{
+    id: 63,
+    name: "ECLAIRE - ECLAIRE",
+    reference: "RF0063",
+    price: 225000,
+    category: "dulce - gourmand",
+    gender: "mujer",
+    moment: "dia",
+    image: "./img/Perfume63.png",
+    gallery: ["", "", ""],
+    description: "Como morder un éclair recién hecho: caramelo dorado, leche cremosa y vainilla suave en un aroma irresistiblemente dulce y sofisticado. Para la mujer que disfruta los pequeños placeres. 🍰"
+},
+
+// ── AFNAN ─────────────────────────────────────────────────────────────────────
+{
+    id: 64,
+    name: "TURATHI ELECTRIC - AFNAN",
+    reference: "RF0064",
+    price: 275000,
+    category: "citrico - aromatico",
+    gender: "hombre",
+    moment: "dia",
+    image: "./img/Perfume64.png",
+    gallery: ["", "", ""],
+    description: "Energía pura en cada spray: cítricos vibrantes, jengibre chispeante y ambroxan magnético. Turathi Electric es moderno, fresco y electrizante — para el hombre que vive con intensidad. ⚡🍋"
+},
+{
+    id: 65,
+    name: "TURATHI BLUE - AFNAN",
+    reference: "RF0065",
+    price: 280000,
+    category: "aromatico - amaderado",
+    gender: "hombre",
+    moment: "noche",
+    image: "./img/Perfume65.png",
+    gallery: ["", "", ""],
+    description: "Elegante y sofisticado, Turathi Blue combina bergamota fresca, almizcle envolvente y maderas suaves. Un aroma masculino refinado que conquista sin esfuerzo y deja huella. 💙🌲"
+},
+{
+    id: 66,
+    name: "KIANA ANGEL - AFNAN",
+    reference: "RF0066",
+    price: 0,
+    category: "frutal - floral",
+    gender: "mujer",
+    moment: "dia",
+    image: "./img/Perfume66.png",
+    gallery: ["", "", ""],
+    description: "Angelical y delicada, con notas de frutos rojos jugosos, vainilla suave y almizcle limpio. Una fragancia femenina, dulce y etérea para la mujer que lleva la luz consigo. 🤍🌸"
+},
+{
+    id: 67,
+    name: "KIANA CRUSH - AFNAN",
+    reference: "RF0067",
+    price: 0,
+    category: "frutal - floral",
+    gender: "mujer",
+    moment: "dia",
+    image: "./img/Perfume67.png",
+    gallery: ["", "", ""],
+    description: "Fresca y enamoradiza, con notas de durazno jugoso, flores blancas delicadas y vainilla cremosa. Para la mujer que enamora con una sonrisa y un aroma que nadie puede olvidar. 🍑💗"
+},
+
+// ── AFNAN 9AM ────────────────────────────────────────────────────────────────
+{
+    id: 68,
+    name: "9AM CLASICA - AFNAN",
+    reference: "RF0068",
+    price: 240000,
+    category: "dulce - amaderado",
+    gender: "hombre",
+    moment: "dia",
+    image: "./img/Perfume68.png",
+    gallery: ["", "", ""],
+    description: "La versión clásica e icónica de 9AM: manzana dulce, vainilla cálida y ámbar suave en una fragancia fresca y masculina ideal para el día a día. Elegante, accesible y de gran proyección. 🍎"
+},
+{
+    id: 69,
+    name: "9AM ELIXIR - AFNAN",
+    reference: "RF0069",
+    price: 265000,
+    category: "especiado - oriental",
+    gender: "hombre",
+    moment: "noche",
+    image: "./img/Perfume69.png",
+    gallery: ["", "", ""],
+    description: "Una versión más oscura y seductora de 9AM: canela ardiente, vainilla intensa y ámbar profundo. Potente, magnético y duradero — el elixir perfecto para las noches de conquista. 🖤🔥"
+},
+{
+    id: 70,
+    name: "9AM REBEL - AFNAN",
+    reference: "RF0070",
+    price: 250000,
+    category: "frutal - tropical",
+    gender: "hombre",
+    moment: "dia",
+    image: "./img/Perfume70.png",
+    gallery: ["", "", ""],
+    description: "Rebelde, fresco y lleno de vida: piña tropical, manzana jugosa y maderas dulces forman una fragancia audaz y moderna. Para el hombre que rompe las reglas con estilo. 🍍🍏"
+},
+
+// ── AL HARAMAIN ───────────────────────────────────────────────────────────────
+{
+    id: 71,
+    name: "AMBER OUD BLACK EDITION - AL HARAMAIN",
+    reference: "RF0071",
+    price: 365000,
+    category: "citrico - amaderado",
+    gender: "hombre",
+    moment: "noche",
+    image: "./img/Perfume71.png",
+    gallery: ["", "", ""],
+    description: "La edición más oscura y lujosa de la línea Amber Oud. Bergamota vibrante, ámbar profundo y maderas oscuras crean una fragancia poderosa, elegante y de larga duración. 🖤✨"
+},
+{
+    id: 72,
+    name: "AMBER OUD RUBY EDITION - AL HARAMAIN",
+    reference: "RF0072",
+    price: 350000,
+    category: "oriental - dulce",
+    gender: "hombre",
+    moment: "noche",
+    image: "./img/Perfume72.png",
+    gallery: ["", "", ""],
+    description: "Lujosa y cálida como una joya: almendra suave, azafrán exótico y ámbar dulce en una fragancia que evoca riqueza, sensualidad y distinción oriental. 💎❤️"
+},
+{
+    id: 73,
+    name: "AMBER OUD GOLD EDITION - AL HARAMAIN",
+    reference: "RF0073",
+    price: 370000,
+    category: "frutal - cremoso",
+    gender: "hombre",
+    moment: "dia",
+    image: "./img/Perfume73.png",
+    gallery: ["", "", ""],
+    description: "Dorada como el lujo puro: melón fresco, piña tropical y vainilla cremosa en una fragancia que irradia alegría, sofisticación y clase. Perfecta para cualquier ocasión. 🥇🍈"
+},
+{
+    id: 74,
+    name: "AMBER OUD AQUA DUBAI - AL HARAMAIN",
+    reference: "RF0074",
+    price: 370000,
+    category: "marino - citrico",
+    gender: "hombre",
+    moment: "dia",
+    image: "./img/Perfume74.png",
+    gallery: ["", "", ""],
+    description: "La brisa de Dubai en un frasco: notas marinas cristalinas, cítricos vibrantes y almizcle limpio. Fresco, moderno y cosmopolita — para el hombre que vive a lo grande. 🌊🏙️"
+},
+
+// ── ODYSSEY (nuevas variantes) ────────────────────────────────────────────────
+{
+    id: 75,
+    name: "ODYSSEY MS ELIXIR",
+    reference: "RF0075",
+    price: 260000,
+    category: "citrico - ambar",
+    gender: "hombre",
+    moment: "noche",
+    image: "./img/Perfume75.png",
+    gallery: ["", "", ""],
+    description: "El elixir más intenso de Odyssey: mandarina vibrante, vainilla intensa y ámbar cálido en una fragancia sofisticada y de larga duración. Para el hombre que busca dejar su marca. 🟠✨"
+},
+{
+    id: 76,
+    name: "ODYSSEY SPECTRA",
+    reference: "RF0076",
+    price: 245000,
+    category: "frutal - dulce",
+    gender: "hombre",
+    moment: "noche",
+    image: "./img/Perfume76.png",
+    gallery: ["", "", ""],
+    description: "Colorido, vibrante y único como el espectro de luz. Frutas rojas jugosas, vainilla suave y almizcle envolvente crean una fragancia llamativa y moderna que no pasa desapercibida. 🌈"
+},
+{
+    id: 77,
+    name: "ODYSSEY CANDEE",
+    reference: "RF0077",
+    price: 260000,
+    category: "dulce - frutal",
+    gender: "mujer",
+    moment: "dia",
+    image: "./img/Perfume77.png",
+    gallery: ["", "", ""],
+    description: "Dulce, divertida y totalmente irresistible: caramelo suave, frutos rojos y vainilla cremosa en una fragancia femenina que huele a felicidad pura. Para las que aman lo dulce de la vida. 🍬💕"
+},
+
+// ── MAISON ALHAMBRA ───────────────────────────────────────────────────────────
+{
+    id: 78,
+    name: "AMBER & LEATHER - MAISON ALHAMBRA",
+    reference: "RF0078",
+    price: 385000,
+    category: "ambar - cuero",
+    gender: "hombre",
+    moment: "noche",
+    image: "./img/Perfume78.png",
+    gallery: ["", "", ""],
+    description: "Masculinidad en estado puro: ámbar cálido, cuero genuino y maderas oscuras forman una fragancia audaz, sofisticada y seductora. Para el hombre que impone respeto sin hablar. 🖤"
+},
+{
+    id: 79,
+    name: "JEAN LOWE FRAICHIE - MAISON ALHAMBRA",
+    reference: "RF0079",
+    price: 260000,
+    category: "citrico - fresco",
+    gender: "hombre",
+    moment: "dia",
+    image: "./img/Perfume79.png",
+    gallery: ["", "", ""],
+    description: "Fresco, limpio y sofisticado: limón brillante, notas verdes y almizcle blanco crean una fragancia refinada y moderna. Ideal para el hombre elegante que ama los aromas limpios. 🍋🌿"
+},
+{
+    id: 80,
+    name: "JEAN LOWE MAITRE - MAISON ALHAMBRA",
+    reference: "RF0080",
+    price: 255000,
+    category: "aromatico - amaderado",
+    gender: "hombre",
+    moment: "dia",
+    image: "./img/Perfume80.png",
+    gallery: ["", "", ""],
+    description: "Con la maestría de un maestro perfumero: cardamomo especiado, iris elegante y maderas suaves en una fragancia discreta pero memorable. Para el hombre de gustos refinados. 🎩"
+},
+{
+    id: 81,
+    name: "JEAN LOWE AZURE - MAISON ALHAMBRA",
+    reference: "RF0081",
+    price: 265000,
+    category: "marino - citrico",
+    gender: "hombre",
+    moment: "dia",
+    image: "./img/Perfume81.png",
+    gallery: ["", "", ""],
+    description: "Azul como el Mediterráneo: cítricos brillantes, notas marinas cristalinas y almizcle limpio. Fresco, cosmopolita y con la elegancia de un hombre que sabe vivir bien. 🌊💙"
+},
+{
+    id: 82,
+    name: "JEAN LOWE INMORTEL - MAISON ALHAMBRA",
+    reference: "RF0082",
+    price: 260000,
+    category: "citrico - aromatico",
+    gender: "hombre",
+    moment: "dia",
+    image: "./img/Perfume82.png",
+    gallery: ["", "", ""],
+    description: "Inmortal como su nombre: bergamota refrescante, jengibre vibrante y ambroxan magnético. Una fragancia moderna y poderosa con la proyección y durabilidad de los grandes clásicos. ♾️"
+},
+{
+    id: 83,
+    name: "JEAN LOWE OMBRE - MAISON ALHAMBRA",
+    reference: "RF0083",
+    price: 265000,
+    category: "floral - oriental",
+    gender: "hombre",
+    moment: "noche",
+    image: "./img/Perfume83.png",
+    gallery: ["", "", ""],
+    description: "Misterioso y seductor como la penumbra: rosa profunda, oud envolvente y ámbar cálido crean una fragancia oscura y sofisticada. Para el hombre que domina la noche con clase. 🌑🌹"
+},
+{
+    id: 84,
+    name: "JEAN LOWE VIBE - MAISON ALHAMBRA",
+    reference: "RF0084",
+    price: 250000,
+    category: "frutal - aromatico",
+    gender: "hombre",
+    moment: "dia",
+    image: "./img/Perfume84.png",
+    gallery: ["", "", ""],
+    description: "Vibra con energía positiva: frutas frescas jugosas, lavanda aromática y maderas cálidas en una fragancia dinámica y versátil. Para el hombre activo que siempre está en movimiento. 🎵🌿"
+},
+
+// ── ACQUA DI GIO EDP - GIORGIO ARMANI ────────────────────────────────────────
+{
+    id: 85,
+    name: "ACQUA DI GIO EDP - GIORGIO ARMANI",
+    reference: "RF0085",
+    price: 500000,
+    category: "marino - aromatico",
+    gender: "hombre",
+    moment: "dia",
+    image: "./img/Perfume85.png",
+    gallery: ["", "", ""],
+    description: "La versión Eau de Parfum del legendario Acqua di Giò: más profundo, más intenso y con mayor duración. Notas marinas puras, salvia aromática y vetiver terroso elevan este clásico a otro nivel. 🌊🤍"
+},
+
+// ── JEAN PAUL GAULTIER ────────────────────────────────────────────────────────
+{
+    id: 86,
+    name: "LE MALE LE PARFUM - JEAN PAUL GAULTIER",
+    reference: "RF0086",
+    price: 465000,
+    category: "aromatico - oriental",
+    gender: "hombre",
+    moment: "noche",
+    image: "./img/Perfume86.png",
+    gallery: ["", "", ""],
+    description: "La versión más intensa y lujosa del icónico Le Male: cardamomo electrizante, lavanda envolvente y vainilla cálida en una fragancia de fuerza irresistible. El perfume más seductor de Gaultier. 💪🔥"
+},
+{
+    id: 87,
+    name: "LE BEAU LE PARFUM - JEAN PAUL GAULTIER",
+    reference: "RF0087",
+    price: 450000,
+    category: "frutal - tropical",
+    gender: "hombre",
+    moment: "dia",
+    image: "./img/Perfume87.png",
+    gallery: ["", "", ""],
+    description: "Bello, fresco y magnético: piña tropical, coco cremoso y haba tonka dulce forman una fragancia solar y sofisticada. Para el hombre que irradia belleza y confianza en cada paso. 🏝️✨"
+},
+{
+    id: 88,
+    name: "LE MALE ELIXIR - JEAN PAUL GAULTIER",
+    reference: "RF0088",
+    price: 455000,
+    category: "oriental - dulce",
+    gender: "hombre",
+    moment: "noche",
+    image: "./img/Perfume88.png",
+    gallery: ["", "", ""],
+    description: "El elixir más oscuro y adictivo de la familia Le Male: miel dorada, vainilla profunda y tabaco suave crean una fragancia hipnótica y magnética que no deja a nadie indiferente. 🍯🖤"
+},
+{
+    id: 89,
+    name: "ULTRA MALE - JEAN PAUL GAULTIER",
+    reference: "RF0089",
+    price: 455000,
+    category: "frutal - dulce",
+    gender: "hombre",
+    moment: "noche",
+    image: "./img/Perfume89.png",
+    gallery: ["", "", ""],
+    description: "Ultrapotente y adictivo: pera jugosa, canela ardiente y vainilla dulce en un contraste que desafía las convenciones. Ultra Male es atrevido, sensual y difícil de olvidar. 🍐🔥"
+},
+
+// ── PACO RABANNE ──────────────────────────────────────────────────────────────
+{
+    id: 90,
+    name: "PHANTOM - PACO RABANNE",
+    reference: "RF0090",
+    price: 455000,
+    category: "aromatico - amaderado",
+    gender: "hombre",
+    moment: "noche",
+    image: "./img/Perfume90.png",
+    gallery: ["", "", ""],
+    description: "Futurista, inesperado y magnético: lavanda vibrante, vainilla envolvente y ámbar cálido en una fragancia que desafía el tiempo. Phantom es el perfume del hombre del futuro, hoy. 🤖✨"
+},
+
+// ── YVES SAINT LAURENT ────────────────────────────────────────────────────────
+{
+    id: 91,
+    name: "Y EDT - YVES SAINT LAURENT",
+    reference: "RF0091",
+    price: 440000,
+    category: "citrico - aromatico",
+    gender: "hombre",
+    moment: "dia",
+    image: "./img/Perfume91.png",
+    gallery: ["", "", ""],
+    description: "Fresco, determinado y elegante: manzana vibrante, jengibre especiado y salvia aromática en una fragancia que refleja la ambición y el estilo del hombre YSL. 🍏💼"
+},
+{
+    id: 92,
+    name: "Y LE PARFUM - YVES SAINT LAURENT",
+    reference: "RF0092",
+    price: 490000,
+    category: "citrico - oriental",
+    gender: "hombre",
+    moment: "noche",
+    image: "./img/Perfume92.png",
+    gallery: ["", "", ""],
+    description: "La versión más intensa y seductora de Y: manzana profunda, lavanda noble y ámbar oscuro crean una fragancia que encarna el lado más sofisticado y misterioso del hombre YSL. 🖤"
+},
+{
+    id: 93,
+    name: "MYSLF - YVES SAINT LAURENT",
+    reference: "RF0093",
+    price: 500000,
+    category: "citrico - floral",
+    gender: "hombre",
+    moment: "dia",
+    image: "./img/Perfume93.png",
+    gallery: ["", "", ""],
+    description: "Una oda a la autenticidad: bergamota brillante, flor de azahar exótica y maderas cálidas en una fragancia única que celebra al hombre tal como es — libre, auténtico y poderoso. 🌿🌸"
+},
+
+// ── DIOR ──────────────────────────────────────────────────────────────────────
+{
+    id: 94,
+    name: "MISS DIOR - DIOR",
+    reference: "RF0094",
+    price: 660000,
+    category: "floral - suave",
+    gender: "mujer",
+    moment: "dia",
+    image: "./img/Perfume94.png",
+    gallery: ["", "", ""],
+    description: "El ícono eterno de la feminidad: rosa de mayo, peonía luminosa y almizcle suave en la fragancia más romántica y elegante de Dior. Para la mujer que vive el amor con intensidad. 🌹👗"
+},
+
+// ── BURBERRY ──────────────────────────────────────────────────────────────────
+{
+    id: 95,
+    name: "HER - BURBERRY",
+    reference: "RF0095",
+    price: 460000,
+    category: "frutal - dulce",
+    gender: "mujer",
+    moment: "dia",
+    image: "./img/Perfume95.png",
+    gallery: ["", "", ""],
+    description: "Creada para la mujer de hoy: frutos rojos vibrantes, vainilla cálida y almizcle suave en una fragancia que es a la vez moderna y clásica. Audaz, femenina y completamente irresistible. 🫐✨"
+},
+{
+    id: 96,
+    name: "GODDESS - BURBERRY",
+    reference: "RF0096",
+    price: 500000,
+    category: "oriental - dulce",
+    gender: "mujer",
+    moment: "noche",
+    image: "./img/Perfume96.png",
+    gallery: ["", "", ""],
+    description: "Divinamente sensual: vainilla bourbon cálida, lavanda suave y cacao oscuro en una fragancia que empodera y seduce. Goddess es para la mujer que sabe que es única. 👑🍫"
 }
 
 ];
